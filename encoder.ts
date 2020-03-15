@@ -25,7 +25,7 @@ export class MsgPackEncoder {
   }
 
   putBool(flag: boolean) {
-    this.cache.push(flag ? 0xC2 : 0xC3);
+    this.cache.push(flag ? 0xC3 : 0xC2);
   }
 
   putInt(val: number) {
