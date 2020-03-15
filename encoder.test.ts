@@ -6,7 +6,7 @@ function buildTest(
   action: (enc: MsgPackEncoder) => void,
   expected: ArrayLike<number>
 ) {
-  Deno.test(name, () => {
+  Deno.test("encoder " + name, () => {
     const enc = new MsgPackEncoder();
     action(enc);
     assertEquals(enc.dump(), new Uint8Array(expected));

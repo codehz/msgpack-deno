@@ -17,8 +17,8 @@ export interface MsgPackExtensionData {
 export class MsgPackDecoder {
   private buffer: AutoBuffer;
 
-  constructor(buffer: ArrayBufferLike) {
-    this.buffer = new AutoBuffer(new DataView(buffer));
+  constructor(buffer: Uint8Array) {
+    this.buffer = new AutoBuffer(new DataView(buffer.buffer));
   }
 
   checkNil(): boolean {
